@@ -2,8 +2,8 @@
 // package paths to filesystem directories and vice versa.
 package patsy
 
-//go:generate go get github.com/dave/rebecca/cmd/becca
-//go:generate becca -package=github.com/dave/patsy
+//go:generate go get github.com/krishnamiriyala/rebecca/cmd/becca
+//go:generate becca -package=github.com/krishnamiriyala/patsy
 
 import (
 	"go/build"
@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/dave/patsy/vos"
+	"github.com/krishnamiriyala/patsy/vos"
 	"github.com/pkg/errors"
 )
 

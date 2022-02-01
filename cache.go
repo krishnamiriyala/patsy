@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/dave/patsy/vos"
+	"github.com/krishnamiriyala/patsy/vos"
 	"github.com/pkg/errors"
 )
 
@@ -112,7 +112,7 @@ func (c *Cache) Dirs(ppath string) (map[string]string, error) {
 }
 
 // GoName converts a full filepath to a package path and filename:
-//     /Users/dave/go/src/github.com/dave/foo.go -> github.com/dave/foo.go
+//     /Users/krishnamiriyala/go/src/github.com/krishnamiriyala/foo.go -> github.com/krishnamiriyala/foo.go
 func (c *Cache) GoName(fpath string) (string, error) {
 	fdir, fname := filepath.Split(fpath)
 	ppath, err := c.Path(fdir)
@@ -123,7 +123,7 @@ func (c *Cache) GoName(fpath string) (string, error) {
 }
 
 // FilePath converts a package path and filename to a full filepath:
-//     github.com/dave/foo.go -> /Users/dave/go/src/github.com/dave/foo.go
+//     github.com/krishnamiriyala/foo.go -> /Users/krishnamiriyala/go/src/github.com/krishnamiriyala/foo.go
 func (c *Cache) FilePath(gpath string) (string, error) {
 	ppath, fname := path.Split(gpath)
 	ppath = strings.TrimSuffix(ppath, "/")
